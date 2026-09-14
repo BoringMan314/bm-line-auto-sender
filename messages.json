@@ -1,10 +1,22 @@
-[
-    {
-        "datetime": "2025-09-01 20:43",
-        "message": "問天地何在"
+{
+    "_使用說明": {
+        "recipients": "收件者模式一：聊天室名稱清單，可填一個或多個；每個名稱須與 LINE 左側清單完全相同。不可與 recipient_count 同時填寫。",
+        "recipient_count": "收件者模式二：正整數，例如 1、2、3；從 LINE 左側聊天清單最上方開始，依序發送給前幾個聊天室。不可與 recipients 同時填寫。",
+        "message": "必填。要發送的文字。",
+        "schedule.type": "必填。只可填 once、daily、weekly 或 one_day。",
+        "once": "單次發送：必填 datetime，格式 YYYY-MM-DD HH:MM，例如 2026-09-15 09:00。",
+        "daily": "每日發送：必填 times，格式為 [\"HH:MM\"]；可填多個時間，例如 [\"09:00\", \"18:00\"]。",
+        "weekly": "每週發送：必填 times，另填 weekday（單一星期）或 weekdays（多個星期）。星期只可填：星期一、星期二、星期三、星期四、星期五、星期六、星期日。",
+        "one_day": "指定單日多時段：必填 date（YYYY-MM-DD）與 times（[\"HH:MM\"]）。"
     },
-    {
-        "datetime": "2025-09-01 20:40",
-        "message": "Hello World"
-    }
-]
+    "messages": [
+        {
+            "recipients": ["[B.M] 內部群"],
+            "message": "測試",
+            "schedule": {
+                "type": "once",
+                "datetime": "2026-09-14 23:30"
+            }
+        }
+    ]
+}
